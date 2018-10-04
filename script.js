@@ -8,26 +8,26 @@ var expenses;
 var optionalExpenses;
 var income;
 
-console.log(money);
-console.log(time);
+
 
 var appData = {
 	budget: money,
 	timeData: time,
-	expenses: {
-		answerOne: "",
-		answerTwo: ""
-	},
+	expenses: { },
 	optionalExpenses: {},
 	income: [],
 	savings: false
 };
 
-let answerOne = prompt("Введите обязательную статью расходов в этом месяце");
-let answerTwo = prompt("Во сколько обойдется?", " ");
+var expensesItem1 = prompt("Введите обязательную статью расходов в этом месяце");
+var expensesCost1 = prompt("Во сколько обойдется?", " ");
+var expensesItem2 = prompt("Введите обязательную статью расходов в этом месяце");
+var expensesCost2 = prompt("Во сколько обойдется?", " ");
 
-expenses = {
-	answerOne: answerTwo
+appData.expenses = {
+	[expensesItem1]: expensesCost1,
+	[expensesItem2]: expensesCost2
 };
-console.log(expenses);
+
+console.log(appData);
 alert(money/30);
